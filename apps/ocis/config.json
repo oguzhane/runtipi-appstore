@@ -22,13 +22,14 @@
       "type": "url",
       "label": "ownCloud URL",
       "required": true,
+      "default": "https://localhost:9200",
       "env_variable": "OCIS_URL"
     },
     {
       "type": "password",
       "label": "Admin Password",
       "required": true,
-      "min": 8,
+      "min": 4,
       "env_variable": "OCIS_IDM_ADMIN_PASSWORD"
     }
   ],
