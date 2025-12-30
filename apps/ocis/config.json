@@ -19,7 +19,7 @@
   "dynamic_config": true,
   "form_fields": [
     {
-      "type": "url",
+      "type": "text",
       "label": "ownCloud URL",
       "required": true,
       "default": "https://localhost:9200",
