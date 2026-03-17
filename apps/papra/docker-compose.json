@@ -7,11 +7,11 @@
       "isMain": true,
       "internalPort": 1221,
       "user": "1000:1000",
-      "environment": {
-        "AUTH_SECRET": "${PAPRA_AUTH_SECRET}",
-        "APP_BASE_URL": "${PAPRA_APP_BASE_URL:-http://localhost:1221}",
-        "AUTH_IS_REGISTRATION_ENABLED": "${PAPRA_AUTH_IS_REGISTRATION_ENABLED:-true}"
-      },
+      "environment": [
+        { "key": "AUTH_SECRET", "value": "${PAPRA_AUTH_SECRET}" },
+        { "key": "APP_BASE_URL", "value": "${PAPRA_APP_BASE_URL:-http://localhost:1221}" },
+        { "key": "AUTH_IS_REGISTRATION_ENABLED", "value": "${PAPRA_AUTH_IS_REGISTRATION_ENABLED:-true}" }
+      ],
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/data/app-data",
@@ -19,6 +19,5 @@
         }
       ]
     }
-  ],
-  "schemaVersion": 2
+  ]
 }
