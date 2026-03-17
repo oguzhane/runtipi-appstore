@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.runtipi.io/app-info.json",
+  "name": "Papra",
+  "id": "papra",
+  "available": true,
+  "short_desc": "A minimalist document management and archiving tool.",
+  "author": "papra-hq",
+  "port": 1221,
+  "categories": ["data"],
+  "description": "Papra is a minimalist, open-source document management and archiving tool. Organize, tag, search, and archive your documents with OCR support, deduplication, and a clean modern interface.",
+  "tipi_version": 1,
+  "version": "latest",
+  "source": "https://github.com/papra-hq/papra",
+  "website": "https://docs.papra.app",
+  "exposable": true,
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1742169600000,
+  "updated_at": 1742169600000,
+  "dynamic_config": true,
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "App Base URL",
+      "required": false,
+      "hint": "The base URL of your Papra instance (e.g. https://papra.example.com). Leave empty to use the default.",
+      "env_variable": "PAPRA_APP_BASE_URL"
+    },
+    {
+      "type": "password",
+      "label": "Auth Secret",
+      "required": true,
+      "min": 32,
+      "hint": "A secret for auth, at least 32 characters. Generate one with: openssl rand -hex 48",
+      "env_variable": "PAPRA_AUTH_SECRET"
+    },
+    {
+      "type": "boolean",
+      "label": "Enable Registration",
+      "required": false,
+      "default": true,
+      "env_variable": "PAPRA_AUTH_IS_REGISTRATION_ENABLED"
+    }
+  ]
+}
